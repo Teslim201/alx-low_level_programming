@@ -2,10 +2,8 @@
 
 /**
  * print_sign - Printing of the sign of a number.
- * @n: this associates to number of which the sign will be printed.
- * return: 1 if the number is greater than zero,
- *         0 if the number is zero,
- *         -1 if the number is less than zero.
+ * @n: function parameter
+ * Return: 1, 0 or -1
  */
 
 int print_sign(int n)
@@ -23,6 +21,6 @@ int print_sign(int n)
 	else
 	{
 		_putchar('-');
-			return (-1);
+		return (-1);
 	}
 }
