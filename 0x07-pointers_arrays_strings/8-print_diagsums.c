@@ -2,26 +2,26 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - Entry point
- * @a: input
- * @size: input
- * Return: Always 0 (Success)
+ *print_diagsums - a program that prints the sum of the two
+ *diagonals of a square matrix of integers
+ *@size: maztrix's column's width
+ *@a: beginning of matrix
+ *Return: void
  */
 
 void print_diagsums(int *a, int size)
 {
-	int sum1, sum2, t;
+	int i, j, k, l = 0, m = 0;
 
-	sum1 = 0;
-	sum2 = 0;
-
-	for (t = 0; t < size; t++)
+	for (i = 0; i < size; i++)
 	{
-		sum1 = sum1 + a[t * size + t];
+		k = (i * size) + i;
+		l += *(a + k);
 	}
-	for (t = size - 1; t >= 0; t--)
+	for (j = 0; j < size; j++)
 	{
-		sum2 += a[t * size + (size - t - 1)];
+		k = (j * size) + (size - 1 - j);
+		m += *(a + k);
 	}
-	printf ("%d, %d\n", sum1, sum2);
-}
+	printf("%i, %i\n", l, m);
+}}
