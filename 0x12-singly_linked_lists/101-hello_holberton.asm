@@ -1,13 +1,15 @@
-section .data
-hello_msg db 'Hello, Holberton',0xA,0
+SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-section .text
-extern printf
-global main
-
+	SECTION .text
+	extern printf
+	global main
 main:
-push rbp
-mov rdi, hello_msg
-call printf
-pop rbp
-ret
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
+
+	mov eax, 0
+	ret
