@@ -1,15 +1,16 @@
 #ifndef _LISTS_
 #define _LISTS_
 
-#include 
-#include 
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * struct listint_s - this is the singly linked list
- * @n:this is the integer
- * @next: this points to the next node
+ * struct listint_s -this is singly linked list
+ * @n: ptints integer
+ * @next:prints points to the next node
  *
  * Description:this is singly linked list node structure
+ * is for Alx project
  */
 typedef struct listint_s
 {
@@ -18,11 +19,11 @@ typedef struct listint_s
 } listint_t;
 
 /**
- * struct listp_s - this is the singly linked list
- * @p: this is the pointers of nodes
- * @next: this points to the next node
+ * struct listp_s - this is singly linked list
+ * @p:prints pointers of nodes
+ * @next: prints points to the next node
  *
- * Description: this is the singly linked list of pointers
+ * Description: this is singly linked list of pointers
  */
 typedef struct listp_s
 {
