@@ -6,14 +6,14 @@
  * @head: this is the head of a list.
  * @idx: this is the index of the list where the new node is
  * added to.
- * @t: this is the integer element.
+ * @n: this is the integer element.
  *
  * Return: this is the address of the new node, or NULL if it
  * fails.
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int t)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int t;
+	unsigned int n;
 	listint_t *new;
 	listint_t *h;
 
@@ -34,7 +34,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int t)
 	if (new == NULL)
 		return (NULL);
 
-	new->t = t;
+	new->n = n;
 
 	if (idx == 0)
 	{
